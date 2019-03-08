@@ -28,6 +28,7 @@ function calculeteFirePropagation(){
 function updateFireIntensityPerPixel(currentPixelIndex) {
     let belowPixelIndex = currentPixelIndex + fireWidth;
     if (belowPixelIndex >= fireHight * fireWidth) {
+        baseFirePropagation(currentPixelIndex);
         return;
     }
     let decay = Math.floor(Math.random()*3);
@@ -86,4 +87,28 @@ function creatFireSource(){
 }
 function toggleDebug(){
     debug = !debug;
+}
+function baseFirePropagation(currentPixelIndex){
+    let pixelLeft = currentPixelIndex -1;
+    let pixelRight = currentPixelIndex + 1;
+    let increase; 
+    let newFireIntensity;
+    let totalCells = fireHight * fireWidth;
+    if (pixelRight < totalCells){
+        let rightFireIntensity = firePixelArray[pixelRight];
+        if(rightFireIntensity < 36){
+            increase = Math.floor(Math.random()*3);
+            newFireIntensity = rightFireIntensity + increase <= 36 ? rightFireIntensity + increase: 36;  
+            firePixelArray[pixelRight] = newFireIntensity;
+        }
+    }
+    if(pixelLeft >= totalCells - fireWidth){
+        let leftFireIntensity = firePixelArray[pixelLeft];
+        if(leftFireIntensity < 36){
+            increase = Math.floor(Math.random()*3);
+            newFireIntensity = leftFireIntensity + increase <= 36 ? leftFireIntensity + increase: 36;  
+            firePixelArray[pixelLeft] = newFireIntensity;
+        }
+    }
+
 }

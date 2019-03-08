@@ -9,11 +9,11 @@ td{
     text-align: center;
     vertical-align: center;
     font-family: monospace;
-    font-size: 12px;
+    font-size: 14px;
     position: relative;
 }
 .pixel-index{
-    font-size: 5px;
+    font-size: 10px;
     display: inline-block;
     position: absolute;
     top: 2px;
