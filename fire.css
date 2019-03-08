@@ -9,11 +9,11 @@ td{
     text-align: center;
     vertical-align: center;
     font-family: monospace;
-    font-size: 18px;
+    font-size: 12px;
     position: relative;
 }
 .pixel-index{
-    font-size: 10px;
+    font-size: 5px;
     display: inline-block;
     position: absolute;
     top: 2px;
@@ -25,4 +25,10 @@ td.pixel {
     width: 18px;
     height: 18px;
     border: 0;
+}
+#degub{
+    position: relative;
+    
+    float: right;
+    padding-right: 20%;
 }
