@@ -9,16 +9,16 @@ td{
     text-align: center;
     vertical-align: center;
     font-family: monospace;
-    font-size: 14px;
+    font-size: 12px;
     position: relative;
 }
 .pixel-index{
-    font-size: 10px;
+    font-size: 3px;
     display: inline-block;
     position: absolute;
     top: 2px;
     right: 2px;
-    color: #999;
+    color: #000;
     
 }
 td.pixel {
